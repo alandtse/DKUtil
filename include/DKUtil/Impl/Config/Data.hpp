@@ -162,7 +162,7 @@ namespace DKUtil::Config::detail
 		{
 			_collection.reset();
 
-			_isCollection = (a_collection.size() > 1);
+			_isCollection = (a_collection.size() > 0);
 			[[likely]] if (_isCollection) {
 				_collection = std::make_unique<collection>(std::move(a_collection));
 				_data = a_collection.front();
